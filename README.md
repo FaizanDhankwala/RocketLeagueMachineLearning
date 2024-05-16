@@ -80,7 +80,7 @@ The above code serves the purpose of capturing screenshots from a designated win
 
 Next,  we move on to Labeling the Dataset
 
-#PART 2: LABELING THE DATASET
+# PART 2: LABELING THE DATASET
 
 ```
 import os
@@ -255,7 +255,7 @@ Here is an overivew of what the training looked like at this stage:
 
 This training took roughly 3 hours.
 
-#PART 4: RUNNING THE OBJECT DETECTION AND RESULTS
+# PART 4: RUNNING THE OBJECT DETECTION AND RESULTS
 
 Now that the model was done training, the only thing left was to test it out. However, we ran into a pretty big issue when first starting to run the object detection. Of course, we needed a seperate window that mimiked the game but also added annotations on top of it. And so, we decided to add the lines of code:
 ```
@@ -455,7 +455,7 @@ It enters a loop to continuously capture screenshots, process them using the Ima
 Pressing the 'q' key closes the window and terminates the script.
 
 
-#RESULTS
+# RESULTS
 - Despite the 550 images fed into the machine, since this was a 3D game with lots of angles and lighting, the model sometimes had trouble picking up the Ball and Boost. At times, I would drive around with the ball clearly in my field of view,  but the model would stay silent.
   ![image](https://github.com/FaizanDhankwala/RocketLeagueMachineLearning/assets/55712375/f8763dfb-c67b-4c30-8bfd-83f3b1679489)
 
