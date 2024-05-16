@@ -1,4 +1,4 @@
-# RocketLeagueMachineLearning
+# Rocket League Object Detection!
 ![image](https://github.com/FaizanDhankwala/RocketLeagueMachineLearning/assets/55712375/b483dccc-cf6d-421d-9edf-e25503fefb1e)
 
 
