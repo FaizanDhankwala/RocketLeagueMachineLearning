@@ -250,10 +250,10 @@ drive.mount('/content/gdrive'): Mounts Google Drive to the specified directory /
 !ls data/: Lists the contents of the data/ directory.
 !./darknet detector train data/obj.data cfg/yolov4-tiny-custom.cfg yolov4-tiny.conv.29 -dont_show: Trains the YOLOv4-tiny model using the provided dataset, configuration file, and pre-trained weights, with the -dont_show flag suppressing visualization during training.
 
-Here is an overivew of what the training looked like at this stage:
+- Here is an overivew of what the training looked like at this stage:
 ![image](https://github.com/FaizanDhankwala/RocketLeagueMachineLearning/assets/55712375/b87b4b5f-ddfb-4005-b1cb-d540c13a0163)
 
-This training took roughly 3 hours.
+- This training took roughly 3 hours.
 
 # PART 4: RUNNING THE OBJECT DETECTION AND RESULTS
 
@@ -437,20 +437,20 @@ while(True):
 
 print('Finished.')
 ```
-While it looks lengthy, the code itself is pretty simple. Lets break it down:
+- While it looks lengthy, the code itself is pretty simple. Lets break it down:
 WindowCapture Class:
 
-This class is responsible for capturing screenshots from a specified window.
+- This class is responsible for capturing screenshots from a specified window.
 It uses the win32gui and win32ui libraries to interact with the Windows GUI.
 The get_screenshot() method retrieves the screenshot and returns it as a NumPy array.
 ImageProcessor Class:
 
-This class processes the captured screenshots using a YOLOv4-tiny object detection model.
+- This class processes the captured screenshots using a YOLOv4-tiny object detection model.
 It utilizes OpenCV's DNN module to load the model and perform inference on the screenshots.
 The proccess_image() method processes the image, detects objects, and returns their coordinates and class labels.
 Main Execution:
 
-The script initializes instances of the WindowCapture and ImageProcessor classes.
+- The script initializes instances of the WindowCapture and ImageProcessor classes.
 It enters a loop to continuously capture screenshots, process them using the ImageProcessor, and display the results in a window using OpenCV.
 Pressing the 'q' key closes the window and terminates the script.
 
@@ -458,10 +458,8 @@ Pressing the 'q' key closes the window and terminates the script.
 # RESULTS
 - Despite the 550 images fed into the machine, since this was a 3D game with lots of angles and lighting, the model sometimes had trouble picking up the Ball and Boost. At times, I would drive around with the ball clearly in my field of view,  but the model would stay silent.
   ![image](https://github.com/FaizanDhankwala/RocketLeagueMachineLearning/assets/55712375/f8763dfb-c67b-4c30-8bfd-83f3b1679489)
-
--However, at other times- expeically when the car was not moving, the model had no trouble picking up both the ball and boost with high confidence
+- However, at other times- expeically when the car was not moving, the model had no trouble picking up both the ball and boost with high confidence
 ![image](https://github.com/FaizanDhankwala/RocketLeagueMachineLearning/assets/55712375/5904f03f-81b9-46b9-876b-c2d1a4179c11)
-
 - And lastly, at times where the car was moving extremely fast, the model would sometimes mistake bright lights or wheels as the ball or boost. However, most of these were with low confidence
 ![image](https://github.com/FaizanDhankwala/RocketLeagueMachineLearning/assets/55712375/4f2f752b-9a5f-4c18-bdf2-6b5ec8482dfb)
 
